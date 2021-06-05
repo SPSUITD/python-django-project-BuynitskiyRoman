@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Chat - Home
+{% endblock title %}
+
+{% block content %}
+
+		{% if not user.is_authenticated %}
+		    <h1 class="heading" style="text-align: center;">Welcome To Chat!</h1>
+		    <!-- Other Stuff -->
+
+
+		{% else %}
+		    <h1 class="heading" style="text-align: center;">Welcome Back, {{ user }}!</h1><br><hr class="hr"><br><br>
+		    <h2 class="normal">You Are Now Logged In Chat!</h2><br><hr><br>
+		    
+		{% endif %}
+
+{% endblock content %}

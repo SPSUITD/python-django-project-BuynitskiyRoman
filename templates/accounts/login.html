@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Chat- Login Portal
+{% endblock title %}
+
+
+{% block content %}
+
+		<div class="row">
+			<div class="col-md-4">
+				<form method="POST">
+					{% csrf_token %}
+					{{ form.as_p }}
+
+					<input type="submit" value='Login' class="btn btn-outline-primary">
+				</form>
+			</div>
+
+			<div class="col-md-7">
+				<h4>Welcome Back To Chat! Login And Start chatting!</h4><hr>
+			</div>
+		</div>
+{% endblock content %}
